@@ -1,25 +1,25 @@
-// Polymorphism 
+// Polymorphism — qilich silkitsa, kamon otadi, hammasi halol sport 😉
 
 // import removed as unused
 
 // Task 5.2
 class Weapon{
     void action(){
-        print("Doing some action");
+        print("Harakat qilinyapti (qahva ichilgandan keyin tezroq)");
     }
 }
 
 class Sword extends Weapon{
     @override
     void action(){
-        print("Swinging!");
+        print("Qilich silkityapti! (Samuray bo'lib qoldikmi?)");
     }
 }
 
 class Bow extends Weapon{
     @override
     void action(){
-        print("Shooting!");
+        print("Kamon otyapti! (nishon — qozon qopqog'i emas)");
     }
 }
 
@@ -27,21 +27,21 @@ class Bow extends Weapon{
 //Task 5.3
 class Animal{
     void eat(){
-        print("Eating something");
+        print("Ovqatlanyapti — palovmi? 😋");
     }
 }
 
 class Lion extends Animal{
     @override
     void eat(){
-        print("Eating meat");
+        print("Go'sht yeyapti (shashlik hidi keldi)");
     }
 }
 
 class Goat extends Animal{
     @override
     void eat(){
-        print("Eating grass");
+        print("O't yeyapti (tabiat parvarishi)");
     }
 }
 
@@ -53,20 +53,20 @@ void feed(Animal animal){
 // Task 5.4
 class PaymentMethod{
     void pay(double amount){
-        print("Paying \$${amount}");
+        print("To'lov: \$${amount} — kassa ""ding"" dedi");
     }
 }
 
 class CreditCard extends PaymentMethod{
     void processPayment(double amount){
-        print("Processing...");
+        print("Jarayon... (terminal PIN kutyapti)");
         pay(amount);
     }
 }
 
 class PayPal extends PaymentMethod{
     void processPayment(double amount){
-        print("Processing...");
+        print("Jarayon... (PayPal bekor qilmadi, xotirjam)");
         pay(amount);
     }
 }

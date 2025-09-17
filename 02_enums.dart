@@ -1,4 +1,4 @@
-// Enums 
+// Enums — hayot tartibi, trafik chiroqlari va biroz hazil 😄
 
 // Task 2.2
 enum OrderStatus {
@@ -19,13 +19,12 @@ enum TrafficLight {
 String recommendAction(TrafficLight light) {
     switch (light) {
         case TrafficLight.red:
-            return 'Stop';
+            return 'To\'xta! (hayot shirin)';
         case TrafficLight.yellow:
-            return 'Caution';
+            return 'Ehtiyot! (signalga tayyorlan)';
         case TrafficLight.green:
-            return 'Go';
-        default:
-            return 'Invalid light';
+            return 'Yur! (gaz, lekin qoidaga muvofiq)';
+        
     }
 }
 
@@ -55,32 +54,31 @@ int durationInSecond(TrafficLight light){
             return 5;
         case TrafficLight.green:
             return 45;
-        default:
-            return 0;
+        
     }
 }
 
 void main(){
     // Task 2.2
     OrderStatus status = OrderStatus.processing;
-    print('Order status: $status');
+    print('Buyurtma holati: $status (posilkani kutyapmiz)');
 
     // Task 2.3
     TrafficLight currentLight = TrafficLight.red;
-    print('Traffic light: $currentLight');
-    print('Recommended action: ${recommendAction(currentLight)}');
+    print('Svetafor holati: $currentLight');
+    print('Tavsiya: ${recommendAction(currentLight)}');
 
     // Task 2.4
-    User user = User('Alice', UserRole.editor);
-    print('User: ${user.name}, Role: ${user.role}');
-    print('Has edit permission: ${user.hasEditPermission()}');
+    User user = User('Muhammadali', UserRole.editor);
+    print('Foydalanuvchi: ${user.name}, Roli: ${user.role}');
+    print('Tahrirlash huquqi: ${user.hasEditPermission()}');
 
     // Task 2.5
     TrafficLight light1 = TrafficLight.green;
     TrafficLight light2 = TrafficLight.yellow;
     TrafficLight light3 = TrafficLight.red;
-    print('Green light duration: ${durationInSecond(light1)} seconds');
-    print('Yellow light duration: ${durationInSecond(light2)} seconds');    
-    print('Red light duration: ${durationInSecond(light3)} seconds');
+    print('Yashil davomiyligi: ${durationInSecond(light1)} soniya');
+    print('Sariq davomiyligi: ${durationInSecond(light2)} soniya');    
+    print('Qizil davomiyligi: ${durationInSecond(light3)} soniya');
 
 }

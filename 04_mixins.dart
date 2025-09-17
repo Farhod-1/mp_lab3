@@ -1,9 +1,9 @@
-// MIXINS
+// MIXINS — uchamiz, ijro qilamiz, biroz kulamiz ✈️🎸
 
 // Task 4.2
 mixin Flyer {
     void fly() {
-        print("Taking off!");
+        print("Parvoz boshlandi! (chiptalar qayerda?)");
     }
 }
 
@@ -26,7 +26,7 @@ mixin Logger{
 
 class DataService with Logger{
     void fetchData(){
-        log("Data fetched successfully");
+        log("Ma'lumotlar muvaffaqiyatli olindi — server choy ichyapti ☕");
     }
 }
 
@@ -50,9 +50,9 @@ class UserSignup with Validator{
 
     void signUp() {
         if (isEmailValid(email) && isPasswordValid(password)) {
-            print("User signed up successfully!");
+            print("Foydalanuvchi muvaffaqiyatli ro'yxatdan o'tdi! 🎉");
         } else {
-            print("Sign up failed. Please check your credentials.");
+            print("Ro'yxatdan o'tish muvaffaqiyatsiz. Ma'lumotlarni tekshiring.");
         }
     }
 }
@@ -60,13 +60,13 @@ class UserSignup with Validator{
 // Task 4.5
 mixin Performer{
     void perform(){
-        print("Performing something");
+        print("Sahna tayyor! Ijro boshlanmoqda");
     }
 }
 
 mixin Musician {
     void playInstrument(){
-        print("Playing instrument");
+        print("Cholg'u chalinyapti — qo'shni eshik taqillatdi 😅");
     }
 }
 
@@ -93,10 +93,10 @@ class Guitarist extends Artist with Performer, Musician{
 
 void main() {
     // Task 4.2
-    Bird sparrow = Bird("Sparrow");
+    Bird sparrow = Bird("Bulbul");
     sparrow.fly();
 
-    Plane boeing = Plane("Boeing 747");
+    Plane boeing = Plane("Il-76");
     boeing.fly();
 
     // Task 4.3
@@ -104,14 +104,14 @@ void main() {
     service.fetchData();
 
     // Task 4.4
-    UserSignup user = UserSignup("fulenergy7@gmail.com", "hahaNotTellingMyPassword");
+    UserSignup user = UserSignup("nodira.akhmedova@example.uz", "hahaNotTellingMyPassword");
     user.signUp();
     UserSignup invalidUser = UserSignup("notFakeEmail.com.123", "123");
     invalidUser.signUp();   
 
     //Task 4.5
-    Dancer dancer = Dancer("Alice");
+    Dancer dancer = Dancer("Aziza");
     dancer.dance();
-    Guitarist guitarist = Guitarist("Bob");
+    Guitarist guitarist = Guitarist("Javlon");
     guitarist.performAndPlay();
 }

@@ -1,4 +1,4 @@
-// Inheritance
+// Inheritance — it huradi, mushuk miyovlaydi, maosh esa ko'tarilsa yaxshi bo'lardi 😅
 
 //Task 3.2
 class Animal {
@@ -30,17 +30,13 @@ class Shape {
 class Circle extends Shape {
     double radius;
 
-    Circle(this.radius, String color) {
-        this.color = color;
-    }
+    Circle(this.radius, String color) : super(color);
 }
 
 class Square extends Shape {
     double sideLength;
 
-    Square(this.sideLength, String color) {
-        this.color = color;
-    }
+    Square(this.sideLength, String color) : super(color);
 }
 
 //Task 3.4
@@ -107,20 +103,21 @@ void main() {
     Circle circle = Circle(1.2, "Red");
     Square square = Square(7.7, "Blue"); 
 
-    print("Circle color: ${circle.color}");
-    print("Square color: ${square.color}");
+    print("Aylana rangi: ${circle.color}");
+    print("Kvadrat rangi: ${square.color}");
 
     // Task 3.4
-    Employee emp = Employee("simple_worker", 50000);
-    Manager mgr = Manager("manager", 60000, 10000);
+    Employee emp = Employee("oddiy_ishchi", 50000);
+    Manager mgr = Manager("boshqaruvchi", 60000, 10000);
 
-    print("Employee salary: ${emp.calculateSalary()}");
-    print("Manager salary: ${mgr.calculateSalary()}");
+    print("Xodim maoshi: ${emp.calculateSalary()} so'm");
+    print("Menejer maoshi: ${mgr.calculateSalary()} so'm (bonus bor ekan!)");
 
     // Task 3.5
-    Book book = Book("2025", 1, "aaaaa, 7 chapters of exercises");
-    DVD dvd = DVD("Inception", 2, "Christopher Nolan");
+    Book book = Book("2025", 1, "Erkin Vohidov");
+    DVD dvd = DVD("Imlosiz", 2, "Otabek Tursunov");
 
     book.getDetails();
     dvd.getDetails();
+    print("Kutubxonachi: 'Kitoblar vaqtida qaytarilsin, iltimos!' 🙃");
 }

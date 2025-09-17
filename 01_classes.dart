@@ -1,4 +1,4 @@
-// CLASSES
+// CLASSES — kichkina lekin mehribon misollar 🙂
 
 
 // Task 1.2
@@ -10,7 +10,7 @@ class Book {
   Book(this.title, this.author, this.numberOfPages);
   
   void displayInfo(){
-    print('Book information : $title, $author, $numberOfPages pages');
+    print('Kitob ma\'lumotlari: "$title" — $author, $numberOfPages bet (choy bilan o\'qish tavsiya)');
   }
 }
 
@@ -39,18 +39,18 @@ class BankAccount{
     void deposit(double amount){
       if(amount > 0){
         balance += amount;
-        print('Deposited: \$${amount}. New balance: \$${balance}');
+        print('Hisob to\'ldirildi: \$${amount}. Yangi balans: \$${balance} (baraka top!)');
       } else {
-        print('no-no-no... No negative numbers');
+        print('yo\'q, yo\'q... Manfiy summa yo\'q!');
       }
     }
 
     void withdraw(double amount){
       if(amount > 0 && amount <= balance){
         balance -= amount;
-        print('Withdrew: \$${amount}. New balance: \$${balance}');
+        print('Pul yechildi: \$${amount}. Qolgan balans: \$${balance} (osh narxi qimmat bo\'libdi)');
       } else {
-        print('you dont have enough money, go play somewhere else');
+        print('Balans yetarli emas, iltimos choyni kamroq shakar bilan iching 🙂');
       }
     }
 }
@@ -73,17 +73,17 @@ class Rectangle{
 
 void main() {
     // Task 1.2
-    Book book = Book('2222', 'Some name', 123);
+    Book book = Book('Qalb sirlari', 'Azizbek Karimov', 123);
     book.displayInfo();
     
     // Task 1.3
-    Student student = Student('Someone', 20, [85.5, 99.9, 78.5]);
+    Student student = Student('Dilnoza', 20, [85.5, 99.9, 78.5]);
     double averageGrade = student.calculateAverageGrade();
     print('Average grade for ${student.name} is $averageGrade');
 
     //Task 1.4
-    BankAccount account1 = BankAccount(123456, 'RichGuy', 9999.0);
-    BankAccount account2 = BankAccount(654321, 'PoorGuy', 10.0);
+    BankAccount account1 = BankAccount(123456, 'Sardor Bek', 9999.0);
+    BankAccount account2 = BankAccount(654321, 'Gulnoza', 10.0);
 
     account1.deposit(500.0);
     account1.withdraw(200.0);
